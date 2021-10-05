@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300&display=swap");
+
+
+
+
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  color: #747999;
+  background: var(--colorWhite);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10%;
+}
+.logo {
+  font-family: "Teko", sans-serif;
+  cursor: pointer;
+  min-width: 150px;
+  text-align: center;
+  font-size: 23px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: var(--primaryColor);
+}
+.NavbarNavigation {
+  list-style: none;
+}
+.NavbarNavigation li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+.NavbarNavigation li a {
+  color: var(--textNavbar);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  transition: all 0.3s ease 0s;
+}
+.NavbarNavigation li a:hover {
+  color: var(--primaryColor);
+  padding-bottom: 3px;
+  transition: all 0.3s ease 0s;
+}
+
+.ButtomNavigation {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 55px;
+  background-color: var(--colorWhite);
+  display: flex;
+  justify-content: space-evenly;
+  overflow: auto;
+  list-style: none;
+  text-decoration: none;
+}
+.ButtomNavigation button span {
+  font-size: 18px;
+}
+
+.Banner {
+  margin-top: 8em;
+  width: 100vw;
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.InfoBanner {
+  width: 700px;
+  height: auto;
+  background: var(--colorWhite);
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 25px;
+}
+.InfoBanner h1 {
+  font-family: "Open Sans", sans-serif;
+}
+.InfoTextBanner {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 19px;
+  font-family: "Montserrat", sans-serif;
+}
+.Typical {
+  height: 30px;
+  margin-bottom: 0.5em;
+  color: var(--primaryColor);;
+}
+
+.AnimeDev {
+  width: 100%;
+}
+
+.ContainerAnimeDev {
+  display: flex;
+  justify-content: center;
+}
+
+.CheckboxToggle {
+  display: none;
+}
+.CheckboxToggle:checked ~ .Toggle:before {
+  transform: translateX(25px);
+  background: #0d1022
+
+}
+
+.Toggle {
+  height: 24px;
+  display: block;
+  border-radius: 20px;
+  background: #3f51b5;
+  width: 50px;
+  padding: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+  background :linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.Toggle::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 14px;
+  background: var(--colorWhite);
+  border-radius: 50%;
+  transform: translateX(0);
+  transition: 0.3s;
+  will-change: transform;
+}
+
+
+.isDarkMode {
+  --primaryColor: #3F51B5;
+  --colorWhite : #FFFFFf;
+  --backgroundBody: #000000;
+  --textNavbar: #5a5b63;
+}
+
+.isLightMode {
+
+  --primaryColor: #3F51B5;
+  --colorWhite : #FFFFFf;
+  --backgroundBody: #000000;
+  --textNavbar: #5a5b63;
+}
+
+
+@media (max-width: 950px) {
+  .SocialMedia {
+    display: none;
+  }
+  .Navbar {
+    justify-content: space-between;
+  }
+  .NavbarNavigation li a {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 750px) {
+  .NavbarNavigation {
+    display: none;
+  }
+  .Hidden {
+    display: flex;
+  }
+}
+@media (max-width: 600px) {
+  .AnimeDev {
+    width: 70%;
+  }
+
+  .InfoBanner h1 {
+    font-size: 23px;
+  }
+  .social_media {
+    display: none;
+  }
+  .Banner {
+    margin-top: 5em;
+  }
+  .logo {
+    margin-left: -6px;
+  }
+  .InfoTextBanner {
+    font-size: 16px;
+  }
+}
